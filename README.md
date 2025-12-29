@@ -1,61 +1,98 @@
-# Space Finder – Serverless Cloud Application
+# Space Finder – Serverless AWS Application (CDK)
 
-Space Finder is a full-stack serverless application built on AWS using CDK.
-The project demonstrates infrastructure-as-code, authentication, monitoring,
-testing, and a React frontend integrated with AWS services.
+Space Finder is a full-stack **serverless cloud application** built on AWS using
+**Infrastructure as Code (AWS CDK)**.
+The project demonstrates how to design, deploy, secure, monitor, and test a
+production-style serverless system.
+
+The application allows authenticated users to browse spaces, while privileged
+(admin) users can create new spaces and upload images securely to S3.
+
+---
 
 ## Architecture Overview
 
-Frontend:
+### Frontend
 - React + TypeScript (Vite)
-- Hosted on S3 and served via CloudFront
-- Authenticated with Amazon Cognito
+- Hosted on Amazon S3 and served via CloudFront
+- Authentication via Amazon Cognito (User Pool)
+- Communicates with backend using JWT-secured REST API
 
-Backend:
+### Backend
 - AWS CDK (TypeScript)
-- API Gateway + Lambda
-- DynamoDB
-- S3 (image uploads)
+- API Gateway + AWS Lambda
+- DynamoDB for data persistence
+- S3 for image storage
 - Cognito User Pool & Identity Pool
-- CloudWatch + SNS monitoring
-- Slack alerting via webhook Lambda
+- CloudWatch metrics and alarms
+- SNS notifications with Slack webhook integration
+
+---
 
 ## Repository Structure
-
-frontend/  – React application  
-backend/   – AWS CDK infrastructure & Lambda functions  
+```
+/
+├── ☁️ Space-Finder-Backend/     # AWS CDK stacks, Lambda functions, and API Gateway logic
+├── ⚛️ Space-Finder-Frontend/    # React frontend application
+├── 📄 README.md                 # Project documentation
+└── 🔧 .gitignore                # Git configuration
+```
+---
 
 ## Key Features
 
-- Serverless REST API
-- JWT-based authentication with Cognito
-- Role-based authorization (admin vs user)
-- Secure S3 uploads using temporary credentials
-- CloudWatch alarms with SNS notifications
-- Slack integration for API monitoring
-- Infrastructure tests with CDK assertions
-- Lambda unit tests using Jest & mocks
+- Serverless REST API built with API Gateway and Lambda
+- JWT-based authentication using Amazon Cognito
+- Role-based authorization (admin vs regular users)
+- Secure S3 uploads using temporary IAM credentials
+- Infrastructure monitoring with CloudWatch Alarms
+- SNS-based alerting with Slack integration
+- Infrastructure tests using CDK assertions
+- Lambda unit tests using Jest with AWS SDK mocks
+
+---
 
 ## Local Development
 
 ### Backend
-* cd backend
-* npm install
-* npm run deploy
+```bash
+cd Space-Finder-Backend
+npm install
+npm run deploy
+```
+
+Deployment is fully managed via AWS CDK.
 
 ### Frontend
-* cd frontend
-* npm install
-* npm run dev
+```bash
+cd Space-Finder-Frontend
+npm install
+npm run dev
+```
+---
 
 ## Testing
 
-Backend includes:
-- CDK infrastructure tests
+The backend includes:
+- CDK infrastructure tests (CloudFormation assertions)
 - Lambda unit tests
-- AWS SDK mocking with Jest
+- AWS SDK mocking with Jest (no real AWS calls)
 
-## Notes
+---
 
-Secrets (Slack webhook, credentials) are managed via environment variables
-and are intentionally excluded from the repository.
+## Security & Secrets
+
+Sensitive values (Slack webhook URL, AWS credentials, deployment outputs)
+are managed via environment variables and are intentionally excluded from Git.
+
+---
+
+## Why This Project
+
+This project was built to practice and demonstrate:
+- Real-world AWS serverless architecture
+- Infrastructure as Code with AWS CDK
+- Secure authentication & authorization flows
+- Observability and alerting in cloud systems
+- Testing AWS infrastructure and Lambda logic
+
