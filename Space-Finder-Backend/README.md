@@ -20,8 +20,10 @@ This folder contains the backend infrastructure and services for Space Finder.
 - AWS SDK mocking in tests
 
 ## Deployment
-* npm install
-* npm run deploy
+```bash
+npm install
+npm run deploy
+```
 
 Environment variables required:
 - SLACK_WEBHOOK_URL
