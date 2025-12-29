@@ -1,6 +1,6 @@
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { AuthService } from "./AuthService";
-import { DataStack, ApiStack } from '../../../CDK-Space-Project/outputs.json';
+import { DataStack, ApiStack } from '../../../Space-Finder-Backend/outputs.json';
 import { type SpaceEntry } from "../components/model/model";
 
 const spacesUrl = ApiStack.ApiSpacesEndpointB4AFECE1 + 'spaces'

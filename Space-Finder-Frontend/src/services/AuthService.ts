@@ -1,6 +1,6 @@
 import { type SignInOutput, fetchAuthSession, signIn, getCurrentUser, type AuthUser } from '@aws-amplify/auth';
 import { Amplify } from 'aws-amplify';
-import { AuthStack } from '../../../CDK-Space-Project/outputs.json';
+import { AuthStack } from '../../../Space-Finder-Backend/outputs.json';
 import { CognitoIdentityClient } from '@aws-sdk/client-cognito-identity';
 import { fromCognitoIdentityPool } from '@aws-sdk/credential-providers';
 
