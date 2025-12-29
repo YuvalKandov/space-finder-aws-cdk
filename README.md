@@ -39,14 +39,14 @@ backend/   – AWS CDK infrastructure & Lambda functions
 ## Local Development
 
 ### Backend
-cd backend
-npm install
-npm run deploy
+* cd backend
+* npm install
+* npm run deploy
 
 ### Frontend
-cd frontend
-npm install
-npm run dev
+* cd frontend
+* npm install
+* npm run dev
 
 ## Testing
 
