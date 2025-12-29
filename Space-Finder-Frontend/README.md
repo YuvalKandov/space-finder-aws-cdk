@@ -16,6 +16,7 @@ React frontend for the Space Finder application.
 - Role-aware UI behavior
 
 ## Run Locally
-* npm install
-* npm run dev
-
+```bash
+npm install
+npm run dev
+```
