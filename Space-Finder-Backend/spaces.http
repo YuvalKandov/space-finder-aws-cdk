@@ -1,0 +1,29 @@
+@url = https://5diqg2g77b.execute-api.eu-central-1.amazonaws.com/prod/
+@token = eyJraWQiOiJsV1VLSEVuZDBKMkpGTTlwZG1vWFFQTDlya3I3Q3EzNzJCZFNUUmNXMnRFPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxM2E0Yzg1Mi0wMDUxLTcwZTEtNTJjZS00YjU3MmEyMjJkOGYiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmV1LWNlbnRyYWwtMS5hbWF6b25hd3MuY29tXC9ldS1jZW50cmFsLTFfN2Q4UTlJUnpNIiwiY29nbml0bzp1c2VybmFtZSI6Inl1dmFsayIsIm9yaWdpbl9qdGkiOiJmOTFiOTk2ZC0wNmI4LTQ0NTktOGI5ZC0xMWQ0YjVkNjRjMWQiLCJhdWQiOiIyN2ZlNzlwcnM3dmkwNGR1YnBjMmsxdmxqZSIsImV2ZW50X2lkIjoiOGEzYjFjNzYtZDBkYS00YTlmLWI1MGMtYTRlN2EwN2MwMWQyIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3NjU3MjU1NDUsImV4cCI6MTc2NTcyOTE0NSwiaWF0IjoxNzY1NzI1NTQ1LCJqdGkiOiI5MmZlOGM3Mi0xNTFmLTQwZWItYjY1Zi1mZGRjZWRlYTM4OGEiLCJlbWFpbCI6Inl1dmFsazU5MEBnbWFpbC5jb20ifQ.b_EWNsU3xAoevBKxuAjXZ3B-2xE10kcVqniML_qpe3pKjxoVl-j0ep6rCxmwmpWWkn8ui32TOAD9zntFKo6_AuOwixH5Pawxflx9XlIYLBhsFxkgYWNE1aCsT2WRRg8Khvik4cMEfh1tmFyqGh4QSurd8hc6UXRiCdWbAYtZUhJ9Fucu4rTZVBXAAjo0WiLZdzVFJN-SaxLQyzMYG15YIPAtrEzTZKu7qizQEH_4aNmdgxq05Le-z3T4aHHao-cbmdR3o434M-ro4gZLMAKwAcEBmiN4CL2DKd7neUHaY-t5_X5Qq3M9OhA01PlNDQdWOqIvItCsbIDJAFuLBWiodA
+
+GET {{url}}/spaces?id=1f0cd208-81fd-6340-8f19-2d470f6fe620
+Authorization: {{token}}
+###
+
+POST https://1ertg407z7.execute-api.eu-west-1.amazonaws.com/prod/spaces
+content-type: application/json
+
+{
+"location": "Dublin",
+"name": "Best location"
+}
+###
+
+GET https://1ertg407z7.execute-api.eu-west-1.amazonaws.com/prod/spaces?id=fbe76aea-5aff-434e-85f6-e8f5fc1647ec
+###
+
+DELETE {{url}}/spaces?id=1f0cd208-81fd-6340-8f19-2d470f6fe620
+Authorization: {{token}}
+###
+
+PUT https://1ertg407z7.execute-api.eu-west-1.amazonaws.com/prod/spaces?id=fbe76aea-5aff-434e-85f6-e8f5fc1647ec
+content-type: application/json
+
+{
+"name": "Best location 5"
+}
