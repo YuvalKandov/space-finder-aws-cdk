@@ -87,6 +87,18 @@ are managed via environment variables and are intentionally excluded from Git.
 
 ---
 
+## Demo & Screenshots
+
+### Application – Spaces View
+![Spaces Page](screenshots/spaces.png)
+
+### Authentication
+![Login](screenshots/login.png)
+
+### Monitoring & Alerts
+![Slack Alert](screenshots/slack-alert.png)
+---
+
 ## Why This Project
 
 This project was built to practice and demonstrate:
